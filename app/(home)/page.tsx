@@ -24,18 +24,18 @@ export default function Home() {
       <Hero />
 
       {/* Latest News Section */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <SectionHeader
             title="Latest News"
             subtitle="Stay updated with the latest happenings at Polokwane City FC"
           />
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {recentNews.map((article) => (
               <NewsCard key={article.id} article={article} />
             ))}
           </div>
-          <div className="text-center mt-12">
+          <div className="text-center mt-10">
             <Link href="/news">
               <Button size="lg">View All News</Button>
             </Link>
@@ -44,38 +44,38 @@ export default function Home() {
       </section>
 
       {/* Upcoming Matches Section */}
-      <section className="py-20">
+      <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <SectionHeader
             title="Upcoming Matches"
             subtitle="Don't miss the next thrilling encounters"
           />
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {upcomingMatches.map((match) => (
               <MatchCard key={match.id} match={match} />
             ))}
           </div>
-          <div className="text-center mt-12">
+          <div className="text-center mt-10">
             <Link href="/fixtures">
-              <Button size="lg" variant="secondary">View All Fixtures</Button>
+              <Button size="lg" variant="outline">View All Fixtures</Button>
             </Link>
           </div>
         </div>
       </section>
 
       {/* Players Spotlight Section */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <SectionHeader
             title="Players Spotlight"
             subtitle="Meet our star players leading the charge"
           />
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {featuredPlayers.map((player) => (
               <PlayerCard key={player.id} player={player} />
             ))}
           </div>
-          <div className="text-center mt-12">
+          <div className="text-center mt-10">
             <Link href="/team">
               <Button size="lg">View Full Squad</Button>
             </Link>
@@ -84,7 +84,7 @@ export default function Home() {
       </section>
 
       {/* Stats Dashboard Section */}
-      <section className="py-20 bg-gradient-to-br from-black via-gray-900 to-[#FF6B00] text-white">
+      <section className="py-16 bg-black text-white">
         <div className="container mx-auto px-4">
           <SectionHeader
             title="Season Statistics"
